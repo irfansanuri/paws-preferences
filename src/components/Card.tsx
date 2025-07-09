@@ -30,7 +30,7 @@ export default function Card({
   const handleDragEnd = () => {
     //Event handler for dragging Card
     const currentX = x.get();
-    if (Math.abs(currentX) > 80) {
+    if (Math.abs(currentX) > 70) {
       const direction = currentX > 0 ? "right" : "left";
       onSwipe(id, direction);
     }
@@ -38,8 +38,8 @@ export default function Card({
 
   return (
     <motion.div
-      className="lg:h-150 md:h-140 h-110 
-                 lg:w-120 md:w-100 w-75 
+      className="lg:h-150 md:h-140 h-120 
+                 lg:w-120 md:w-100 w-80 
                  text-gray-700 
                  rounded-lg overflow-hidden relative
                  hover:cursor-grab active:cursor-grabbing
