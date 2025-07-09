@@ -38,15 +38,14 @@ export default function Card({
 
   return (
     <motion.div
-      className="lg:h-150 md:h-140 h-120 
+      className="h-fit my-8
                  lg:w-120 md:w-100 w-80 
                  text-gray-700 
-                 rounded-lg overflow-hidden relative
+                 rounded-lg overflow-hidden
                  hover:cursor-grab active:cursor-grabbing
                  innerBg"
       style={{
-        gridRow: 1,
-        gridColumn: 1,
+        
         zIndex,
         x,
         opacity,
@@ -115,7 +114,7 @@ export default function Card({
         </div>
       </div>
       {/* Like Counter */}
-      <div className="text-lg font-bold mt-8" style={{ zIndex: 1000 }}>
+      <div className="text-lg font-bold mt-8 my-14" style={{ zIndex: 1000 }}>
         Your like count: {count}
       </div>
     </motion.div>
