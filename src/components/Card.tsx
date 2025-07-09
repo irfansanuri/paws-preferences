@@ -30,7 +30,7 @@ export default function Card({
   const handleDragEnd = () => {
     //Event handler for dragging Card
     const currentX = x.get();
-    if (Math.abs(currentX) > 120) {
+    if (Math.abs(currentX) > 80) {
       const direction = currentX > 0 ? "right" : "left";
       onSwipe(id, direction);
     }
