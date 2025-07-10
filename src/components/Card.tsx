@@ -2,10 +2,10 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { catEndpoint } from "../api/api";
 
 type Props = {
   id: string;
-  url: string;
   zIndex: number;
   onSwipe: (id: string, direction: "left" | "right") => void;
   progress: number;
@@ -15,7 +15,6 @@ type Props = {
 
 export default function Card({
   id,
-  url,
   zIndex,
   onSwipe,
   progress,
@@ -96,7 +95,7 @@ export default function Card({
           )}
 
           <img
-            src={url}
+            src={`${catEndpoint.image}/${id}`}
             alt={`Cat ${id}`}
             loading="lazy"
             onLoad={() => setLoading(false)}

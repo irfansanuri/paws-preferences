@@ -1,5 +1,4 @@
 import React from "react";
-import { catEndpoint } from "../api/api";
 import type { Cat } from "../types/types";
 import Card from "./Card";
 
@@ -49,7 +48,6 @@ function Cats({
             >
               <Card
                 id={cat.id}
-                url={`${catEndpoint.image}/${cat.id}`}
                 zIndex={cats.length - index}
                 onSwipe={handleSwipe}
                 progress={progression}
